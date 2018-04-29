@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="wrf">
+  	<insert id="addUser">
+		INSERT INTO USER (
+			account,
+			PASSWORD,
+			user_name,
+			user_sex,
+			user_age
+		)
+		VALUES
+			(
+				'root',
+				'z123456',
+				'张三',
+				'男',
+				15
+			)
+  	</insert>
+  	<update id="modifyUser">
+  		UPDATE USER
+			SET user_name = '李四'
+		WHERE
+			user_id = 2
+  	
+  	</update>
+  	<delete id="deleteUser">
+	  		DELETE
+	FROM
+		USER
+	WHERE
+		user_id = 6
+  	
+  	
+  	</delete>
+  	<select id="queryUser">
+	  		SELECT
+		*
+	FROM
+		USER
+	WHERE
+		user_id = 2
+  	
+  	</select>
+  	
+  </mapper>
