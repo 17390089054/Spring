@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.wrf.user.dao.UserDao">
+  	<!-- 返回的数据类型 -->
+ 	<resultMap type="u" id="myUser" >
+	 	<id property="userId"   	javaType="int" jdbcType="INTEGER" column="user_id"/>
+		<result property="userAge"  javaType="int" jdbcType="INTEGER" column="user_age"/>
+		<result property="userName" javaType="java.lang.String" jdbcType="VARCHAR" column="user_name"/>
+		<result property="userSex"  javaType="string" jdbcType="VARCHAR" column="user_sex"/>
+		<result property="account"  javaType="string" jdbcType="VARCHAR" column="account"/>
+		<result property="password" javaType="string" jdbcType="VARCHAR" column="password"/>
+		<result property="userCreateTime" javaType="java.util.Date"  column="user_create_time"/>
+  	</resultMap>
+  	
+  	<!-- sql字段 -->
+  	<sql id="user_colum">
+  		user_id,user_name,user_sex,user_age,password,account,user_create_time
+  	</sql>
+  	
+  	<!-- 查询方法 与DAO层中接口的方法名一致 -->
+  	<select id="queryUser" resultMap="myUser">
+  	SELECT 
+  		<include refid="user_colum"/>
+	FROM 
+		user
+	WHERE
+	 	account=#{account}
+	AND
+		password=#{password}   	
+  	</select>
+  
+  </mapper>

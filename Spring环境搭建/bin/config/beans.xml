@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="stu" class="com.wrf.test.Student">
+		<property name="stuSex" value="男" />
+		<property name="stuName">
+			<value>李四</value>
+		</property>
+	</bean>
+	
+	<!-- list注入 -->
+	<bean id="stu1" class="com.wrf.test.Student">
+		<property name="list">
+			<list>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+				<value>4</value>
+				<value>5</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- set注入 -->
+	<bean id="stu2" class="com.wrf.test.Student">
+		<property name="set">
+			<set>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+				<value>薛六</value>
+				<value>赵七</value>
+			</set>
+		</property>
+	</bean>
+	
+	<!-- map注入 -->
+	<bean id="stu3" class="com.wrf.test.Student">
+		<property name="map" >
+			<map>
+				<entry key="学号" value="1605111" />
+				<entry key="学校" value="长春理工大学"/>
+				<entry>
+					<key>
+						<value>头衔</value>
+					</key>
+					<value>男神</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	
+
+</beans>

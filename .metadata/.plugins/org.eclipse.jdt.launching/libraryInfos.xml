@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0" version="1.8.0_77">
+<bootpath>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\resources.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\rt.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\sunrsasign.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jsse.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jce.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\charsets.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jfr.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre" version="1.8.0_77">
+<bootpath>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\resources.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\rt.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\sunrsasign.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jsse.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jce.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\charsets.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\jfr.jar"/>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="H:\三期工具\三期工具\eclipse开发工具\eclipse\jdk1.8.0\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

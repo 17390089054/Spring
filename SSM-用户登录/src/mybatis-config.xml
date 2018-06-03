@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<!-- 配置mybatis环境 -->
+<!--  <configuration>
+	配置数据库属性文件 
+	<properties resource="jdbc.properties" />
+	配置环境
+	<environments default="mysql">
+		<environment id="mysql">
+			事务管理器 手动提交 
+			<transactionManager type="JDBC"/>
+			配置数据源 使用连接池
+			<dataSource type="POOLED">
+				<property name="driver" value="${mysql.driver}"/>
+				<property name="url" value="${mysql.url}"/>
+				<property name="username" value="${mysql.username}"/>
+				<property name="password" value="${mysql.password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	定义别名		
+	<typeAliases>
+		<package name=""/>
+	</typeAliases>
+	
+	配置映射文件
+	<mappers>
+		<mapper resource=""/>
+	</mappers>
+</configuration> -->
+   
+   
+  <!-- 配置信息 -->
+<configuration>
+ <properties resource="jdbc.properties"/>
+	<typeAliases>
+		<!-- 单一类别名 -->
+		<!-- <typeAlias type="com.wrf.model.User" alias="user"/> -->
+		<!-- package起别名  别名为类名 不区分大小写 -->
+		<package name="com.wrf.user.model"/> 
+	</typeAliases>
+ 	<environments default="mysql"><!-- 环境 -->
+ 		<environment id="mysql">
+ 		<transactionManager type="JDBC"/><!-- 事务管理器  默认手动提交 -->
+ 			<dataSource type="POOLED"><!-- 设置数据源  -->
+ 				<property name="driver" value="${mysql.driver}"/>
+				<property name="url" value="${mysql.url}"/>
+				<property name="username" value="${mysql.username}"/>
+				<property name="password" value="${mysql.password}"/>	 			
+ 			</dataSource>
+ 		</environment>
+ 	
+ 	</environments>
+ 	<!-- 配置映射关系 -->
+ 	<mappers>
+ 		<mapper resource="com/wrf/user/dao/userMapper.xml"/>
+ 	</mappers>
+ </configuration> 
+  

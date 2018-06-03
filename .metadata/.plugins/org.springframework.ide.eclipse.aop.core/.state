@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring环境搭建"/>
+<aop-project name="SpringMVC+MyBatis登录"/>
+<aop-project name="Spring方法调用"/>
+<aop-project name="Spring依赖注入"/>
+</aop-reference-model>
