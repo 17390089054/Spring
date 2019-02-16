@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="static/assets/global/plugins/jquery-1.11.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/assets/global/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="static/assets/global/css/components.css">
+		<link rel="stylesheet" type="text/css" href="static/assets/admin/pages/css/login.css">
+		<title>商品详情</title>
+	</head>
+	<body class="login">
+		<div class="content">
+			<h3 class="form-title">商品详情</h3>
+			<div class="form-group">
+				<!-- <label class="control-label">商品名</label> -->
+				<div>
+					<label class="control-label" id="title"/>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">商品描述</label>
+				<div>
+					<label class="control-label" id="description"/>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">价格</label>
+				<div>
+					<label class="control-label"  id="price"/>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<!-- <label class="control-label">图片</label> -->
+				<div>
+					<img style="width:200px;height:auto"  id="imgUrl"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">库存</label>
+				<div>
+					<label class="control-label" id="stock"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">销量</label>
+				<div>
+					<label class="control-label" id="sales"/>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		function getParam(par){
+		    //获取当前URL
+		    var local_url = document.location.href; 
+		    //获取要取得的get参数位置
+		    var get = local_url.indexOf(par +"=");
+		    if(get == -1){
+		        return false;   
+		    }   
+		    //截取字符串
+		    var get_par = local_url.slice(par.length + get + 1);    
+		    //判断截取后的字符串是否还有其他get参数
+		    var nextPar = get_par.indexOf("&");
+		    if(nextPar != -1){
+		        get_par = get_par.slice(0, nextPar);
+		    }
+		    return get_par;
+		}
+
+		var g_itemVO={};
+		
+
+		jQuery(document).ready(function(){
+				$.ajax({
+					type:"GET",
+					url:"http://localhost:8090/item/get",
+					data:{
+						"id":getParam("id")
+					},
+					xhrFields:{withCredentials:true},
+					success:function(data){
+						if(data.status=="success"){
+							g_itemVO=data.data;
+							reloadDom();
+						}else{
+							alert("获取信息失败，原因为"+data.data.errMsg);
+						}
+					},error:function(data){
+						alert("获取信息失败，原因为"+data.responseText);
+					}
+
+				});	
+			});
+
+			function reloadDom(){
+				$("#title").text(g_itemVO.title);
+				$("#description").text(g_itemVO.description);
+				$("#stock").text(g_itemVO.stock);
+				$("#price").text(g_itemVO.price);
+				$("#imgUrl").attr("src",g_itemVO.imgUrl);
+				$("#sales").text(g_itemVO.sales);
+			}
+			
+
+	</script>
+</html>
