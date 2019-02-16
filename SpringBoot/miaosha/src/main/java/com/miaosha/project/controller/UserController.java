@@ -17,6 +17,7 @@ import com.miaosha.project.response.CommonReturnType;
 import com.miaosha.project.service.UserService;
 import com.miaosha.project.service.model.UserModel;
 import org.apache.commons.lang3.StringUtils;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -91,6 +92,8 @@ public class UserController extends BaseController {
         userService.register(userModel);
         return CommonReturnType.create(null);
     }
+
+
 
     public String EncodeByMD5(String str) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         //确定计算方法

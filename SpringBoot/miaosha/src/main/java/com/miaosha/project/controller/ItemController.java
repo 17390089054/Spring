@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * @create 2019/2/16 0016
  * @since 1.0.0
  */
-@Controller("/item")
+@Controller("item")
 @RequestMapping("/item")
 @CrossOrigin(allowCredentials = "true",origins = "*")
 public class ItemController extends BaseController {
