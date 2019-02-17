@@ -44,7 +44,8 @@ public class OrderController extends  BaseController {
     @ResponseBody
     //封装下单请求
     public CommonReturnType createOrder(@RequestParam(name="itemId")Integer itemId,
-                                        @RequestParam(name="amount")Integer amount) throws BusinessException {
+                                        @RequestParam(name="amount")Integer amount,
+                                        @RequestParam(name="promoId",required = false)Integer promoId) throws BusinessException {
         Boolean isLogin=(Boolean)httpServletRequest.getSession().getAttribute("IS_LOGIN");
         if(isLogin==null||!isLogin.booleanValue()){
             throw new BusinessException(EmBusinesError.USER_NOT_LOGIN,"用户还未登录，无法下单");
@@ -54,7 +55,7 @@ public class OrderController extends  BaseController {
         UserModel userModel=(UserModel)httpServletRequest.getSession().getAttribute("LOGIN_USER");
 
 
-        OrderModel orderModel=orderService.createOrder(userModel.getId(),itemId,amount);
+        OrderModel orderModel=orderService.createOrder(userModel.getId(),itemId,promoId,amount);
 
 
         return CommonReturnType.create(null);
